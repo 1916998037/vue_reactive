@@ -1,0 +1,11 @@
+import Observer from "./Observer"
+export default function observe(value) {
+  if(typeof value !== "object") return
+  let ob
+  if(!value.__ob__) {
+    ob = new Observer(value)
+  } else {
+    ob = value.__ob__
+  }
+  return ob
+}
