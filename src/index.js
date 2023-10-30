@@ -6,9 +6,10 @@ const obj = {
       z: "hello"
     }
   },
-  m: 666
+  m: [1, "oolp", {test: "hahah"}]
 }
 
 observe(obj)
-console.log(obj.x.y.z);
-obj.x.y.z = "hahaha"
+obj.m.push({huhu: "mmm"})
+const last = (obj.m)[3].huhu
+console.log(last)
